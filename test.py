@@ -1,6 +1,6 @@
 import os
 import tkinter as tk
-from tkinter import simpledialog, messagebox
+from tkinter import simpledialog, messagebox, font as tkfont
 from tkinter import scrolledtext
 def list_dir(path):
     try:
@@ -129,32 +129,73 @@ def write_file():
             cancel_button = tk.Button(top, text="Cancel", command=top.destroy)
             cancel_button.pack()
 
+def show_help():
+    help_text = """
+Help for Directory Browser:
+
+    - Navigating Directories:
+      * The main window displays a list of files and folders.
+      * Double-click on a directory name to open it and view its contents.
+      * Use the 'Back' button to return to the previous directory.
+
+    - File Operations:
+      * 'Create File': Click this button and enter a file name to create a new file in the current directory.
+      * 'Read File': Select a file from the list and click this button to view its contents in a new window.
+      * 'Write File': Select a file and click this button to open it for editing. You can modify the file and save the changes.
+      * 'Delete File': Select a file and click this button to delete it. A confirmation dialog will appear before deletion.
+
+    - Additional Features:
+      * The application shows the current directory path in the window title.
+      * In case of access restrictions, an 'Access Denied!' message will be displayed.
+
+    For further assistance, please refer to the application documentation or contact support cwb5722@psu.edu
+    """
+    messagebox.showinfo("Help", help_text)
+
 # Initialize the main window
 window = tk.Tk()
 window.title("Directory Browser")
-window.geometry("700x500")
+window.geometry("800x600")
+window.resizable(False, False)
+app_font = tkfont.Font(family="Arial", size=12)
+
+# Frame for the listbox and scrollbar
+frame = tk.Frame(window)
+frame.pack(pady=10)
 
 # Listbox to show directory contents
-listbox = tk.Listbox(window, width=100, height=20)
+listbox = tk.Listbox(frame, width=80, height=25, font=app_font)
 listbox.bind('<Double-1>', on_double_click)
-listbox.pack()
+listbox.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+# Scrollbar for the listbox
+scrollbar = tk.Scrollbar(frame)
+scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+listbox.config(yscrollcommand=scrollbar.set)
+scrollbar.config(command=listbox.yview)
+
+# Frame for the buttons
+button_frame = tk.Frame(window)
+button_frame.pack(pady=10)
 
 # Buttons for file operations
-create_button = tk.Button(window, text="Create File", command=create_file)
-create_button.pack()
-delete_button = tk.Button(window, text="Delete File", command=delete_file)
-delete_button.pack()
-read_button = tk.Button(window, text="Read File", command=read_file)
-read_button.pack()
-write_button = tk.Button(window, text="Write File", command=write_file)
-write_button.pack()
+create_button = tk.Button(button_frame, text="Create File", command=create_file, font=app_font)
+delete_button = tk.Button(button_frame, text="Delete File", command=delete_file, font=app_font)
+read_button = tk.Button(button_frame, text="Read File", command=read_file, font=app_font)
+write_button = tk.Button(button_frame, text="Write File", command=write_file, font=app_font)
+back_button = tk.Button(button_frame, text="Back", command=go_back, font=app_font)
+help_button = tk.Button(button_frame, text="Help", command=show_help, font=app_font)
 
-# Back button
-back_button = tk.Button(window, text="Back", command=go_back)
-back_button.pack()
+# Organize buttons in a grid
+create_button.grid(row=0, column=0, padx=5)
+delete_button.grid(row=0, column=1, padx=5)
+read_button.grid(row=0, column=2, padx=5)
+write_button.grid(row=0, column=3, padx=5)
+back_button.grid(row=0, column=4, padx=5)
+help_button.grid(row=0, column=5, padx=5)
 
 # Alert label
-alert_label = tk.Label(window, text="", fg="red")
+alert_label = tk.Label(window, text="", fg="red", font=app_font)
 alert_label.pack()
 
 # Start in the current directory
