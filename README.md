@@ -1,4 +1,4 @@
-`# Directory Browser
+# Directory Browser
 
 ## Goal of the Project
 
@@ -55,4 +55,4 @@ The application was tested for various scenarios including directory navigation,
 ## Discussion and Conclusions
 The project successfully meets its objectives but is not without limitations. It currently lacks advanced features like search functionality and bulk operations, which could be future enhancements. The application of course learnings is evident in the structured programming approach and user-centric design, highlighting the importance of accessibility in software development.
 
-Overall, the Directory Browser stands as a testament to the potential impact of technology in enhancing the lives of the elderly.`
+Overall, the Directory Browser stands as a testament to the potential impact of technology in enhancing the lives of the elderly.
