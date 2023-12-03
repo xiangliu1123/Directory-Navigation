@@ -22,9 +22,11 @@ Git Clone https://github.com/xiangliu1123/Directory-Navigation
 ```
 Downloading the repository as zip to your local machine can follow this link: https://github.com/xiangliu1123/Directory-Navigation 
 
-Step 2: Navigate to the directory containing the `directory_browser.py` file.
-
-    It should be display in the src folder when downloaded or cloned.
+Step 2: Navigate or use the command in tber terminal to the directory containing the `directory_browser.py` file .
+Terminal Command:
+```bash
+cd src
+```
 ### Run the script
 
 Run the script in the terminal using Python:
