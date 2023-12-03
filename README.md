@@ -35,8 +35,14 @@ python directory_browser.py.py
 
 - Use the GUI to navigate directories, create, read, edit, and delete files. Detailed instructions can be accessed via the 'Help' button in the application.
 
-- Structure of the Code
-    The code is structured into distinct functions, each handling a specific aspect of file management. The GUI is built using Tkinter widgets, organized logically for ease of use.
+### Structure of the Code
+1.	Main Window Initialization: Creation of the Tkinter window, setting its title, geometry, and font.
+2.	GUI Components: Listbox for directory contents, scrollbar, and buttons for file operations (create, delete, read, write, back, help).
+3.	Event Bindings: Linking GUI elements to their respective functions (e.g., double-click event on the listbox).
+4.	File Operations Functions: list_dir, create_file, delete_file, read_file, write_file, each performing specific file operations.
+5.	Utility Functions: on_double_click, go_back, show_help, handling user interactions like navigation and displaying help.
+6.	File Interaction: Reading from and writing to files in the current directory.
+7.	Main Loop: The execution point that keeps the GUI running.
 
 ### Detailed explanations of each component:
 
