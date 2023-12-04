@@ -6,23 +6,23 @@ The primary objective of the Directory Browser project is to provide a user-frie
 
 ## Significance of the Project
 
-This project significantly enhances the digital experience for the elderly by offering a simplified interface that minimizes complexity and cognitive load. It addresses common challenges faced by older adults, such as difficulty in navigating complex file systems and performing basic file operations. By providing an easy-to-use tool, it helps in bridging the digital divide, empowering the elderly to manage their digital files independently and confidently.
+This project significantly enhances the digital experience for the elderly by offering a simplified interface that minimizes complexity and cognitive load. It addresses common challenges faced by older adults, such as difficulty in navigating complex file systems and performing basic file operations. By providing an easy-to-use tool, it helps bridge the digital divide, empowering the elderly to manage their digital files independently and confidently.
 
 ## Installation and Instruction to Use
 ### Prerequisite
-- Make you have Python install in your current working environment
-- Downlaod integrated Development Environments (IDEs) or using CMD or Powershell with download repository
-- Ensure Python and Tkinter are installed on your work system environment. Tkinter usually comes with Python when downloading python on your local machine.
+- Make you have Python installed in your current working environment
+- Download integrated Development Environments (IDEs) or use CMD or Powershell with a download repository
+- Ensure Python and Tkinter are installed on your work system environment. Tkinter usually comes with Python when downloading Python on your local machine.
 
 ### Installation
-Step 1: Git Clone or download the repository as zip to your local machine.
-Commmand for git clone in the terminal: 
+Step 1: Git Clone or download the repository as a zip to your local machine.
+The command for git clone in the terminal: 
 ```bash
 Git Clone https://github.com/xiangliu1123/Directory-Navigation
 ```
-Downloading the repository as zip to your local machine can follow this link: https://github.com/xiangliu1123/Directory-Navigation 
+Downloading the repository as a zip to your local machine can follow this link: https://github.com/xiangliu1123/Directory-Navigation 
 
-Step 2: Navigate or use the command in tber terminal to the directory containing the `directory_browser.py` file .
+Step 2: Navigate or use the command in the terminal to the directory containing the `directory_browser.py` file.
 Terminal Command:
 ```bash
 cd src
@@ -40,7 +40,7 @@ python directory_browser.py.py
 ### Structure of the Code
 1.	Main Window Initialization: Creation of the Tkinter window, setting its title, geometry, and font.
 2.	GUI Components: Listbox for directory contents, scrollbar, and buttons for file operations (create, delete, read, write, back, help).
-3.	Event Bindings: Linking GUI elements to their respective functions (e.g., double-click event on the listbox).
+3.	Event Bindings: Linking GUI elements to their respective functions (e.g., double-click event on the list box).
 4.	File Operations Functions: list_dir, create_file, delete_file, read_file, write_file, each performing specific file operations.
 5.	Utility Functions: on_double_click, go_back, show_help, handling user interactions like navigation and displaying help.
 6.	File Interaction: Reading from and writing to files in the current directory.
