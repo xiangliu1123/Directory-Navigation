@@ -32,7 +32,7 @@ cd src
 Run the script in the terminal using Python:
 
 ```bash
-python directory_browser.py.py
+python directory_browser.py
 ```
 
 - Use the GUI to navigate directories, create, read, edit, and delete files. Detailed instructions can be accessed via the 'Help' button in the application.
